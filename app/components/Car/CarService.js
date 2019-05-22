@@ -20,8 +20,7 @@ function _setState(propName, data) {
 
 //PUBLIC
 export default class CarService {
-  constructor() {
-  }
+
   addSubscribers(propName, fn) {
     _subscribers[propName].push(fn)
   }
@@ -33,6 +32,33 @@ export default class CarService {
       .then(res => {
         let data = res.data.data.map(d => new Car(d))
         _setState('cars', data)
+      })
+      .catch(err => {
+        console.error(err)
+      })
+  }
+  addCar(carData) {
+    _carApi.post('', carData)
+      .then(res => {
+        this.getAllCars()
+      })
+      .catch(err => {
+        console.error(err)
+      })
+
+  }
+  bid(id) {
+    let carToBidOn = _state.cars.find(c => c._id == id)
+    carToBidOn.price++
+    _carApi.put(id, carToBidOn)
+      .then(res => {
+        this.getAllCars()
+      })
+  }
+  delete(id) {
+    _carApi.delete(id)
+      .then(res => {
+        this.getAllCars()
       })
   }
 }

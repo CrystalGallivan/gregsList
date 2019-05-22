@@ -13,25 +13,37 @@
 </head>
 
 <body>
-  <main class="container">
+  <header class="contianer">
     <div class="row">
-      <div class="col">
+      <div class="col-12 text-center">
+        <h1>Gregslist</h1>
+        <div class="col-12">
+          <button onclick="app.controllers.carController.renderCars()">Cars</button>
+          <button>Properties</button>
+          <button onclick="app.controllers.jobController.renderJobs()">Jobs</button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="row" id="form-content">
+      <!-- <div class="col" id="form-content">
         <form class="row" onsubmit="app.controllers.carController.addCar(event)">
           <div class="form-group col-4">
             <label for="make">Make</label>
-            <input type="text" class="form-control" id="make" name="make" placeholder="Enter Make">
+            <input type="text" class="form-control" id="make" name="make" placeholder="Enter Make" required>
           </div>
           <div class="form-group col-4">
             <label for="model">Model</label>
-            <input type="text" class="form-control" id="model" name="model" placeholder="Enter Model">
+            <input type="text" class="form-control" id="model" name="model" placeholder="Enter Model" required>
           </div>
           <div class="form-group col-4">
             <label for="year">Year</label>
-            <input type="number" class="form-control" id="year" name="year" placeholder="Enter Year">
+            <input type="number" class="form-control" id="year" name="year" placeholder="Enter Year" required>
           </div>
           <div class="form-group col-4">
             <label for="price">Price</label>
-            <input type="number" class="form-control" id="price" name="price" placeholder="Enter Price">
+            <input type="number" class="form-control" id="price" name="price" placeholder="Enter Price" required>
           </div>
           <div class="form-group col-4">
             <label for="description">Description</label>
@@ -39,17 +51,23 @@
           </div>
           <div class="form-group col-4">
             <label for="imgUrl">Image</label>
-            <input type="url" class="form-control" id="imgUrl" name="imgUrl" placeholder="Enter Image Url">
+            <input type="url" class="form-control" id="imgUrl" name="imgUrl" placeholder="Enter Image Url" required>
           </div>
           <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-      </div>
+        </form> -->
+      <!-- </div> -->
     </div>
-    <div class="row" id='cars'>
+    <div class="row" id='lists'>
 
     </div>
   </main>
-
+  <footer class="container">
+    <div class="row">
+      <div class="col">
+        <p>*Not affiliated with Craigslist</p>
+      </div>
+    </div>
+  </footer>
 
 
 
