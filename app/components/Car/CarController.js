@@ -27,4 +27,8 @@ export default class CarController {
     // get data
     _carService.getAllCars()
   }
+  addCar(event) {
+    event.preventDefault();
+    console.log('you should write this at some point')
+  }
 }
