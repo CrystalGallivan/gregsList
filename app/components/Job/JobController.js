@@ -17,14 +17,14 @@ function _drawJobs() {
   document.getElementById('lists').innerHTML = template
 }
 function _drawForm() {
-  document.getElementById('form-content').innerHTML = `<form class="row" onsubmit="app.controllers.carController.addJob(event)">
+  document.getElementById('form-content').innerHTML = `<form class="row" onsubmit="app.controllers.jobController.addJob(event)">
     <div class="form-group col-4">
         <label for="company">Company</label>
-        <input type="text" class="form-control" id="company" name="company" placeholder="Enter Company" required>
+        <input type="text" class="form-control" maxlength="12" id="company" name="company" placeholder="Enter Company" required>
     </div>
     <div class="form-group col-4">
         <label for="jobTitle">Job Title</label>
-        <input type="text" class="form-control" id="jobTitle" name="jobTitle" placeholder="Enter Job Title"
+        <input type="text" class="form-control" maxlenght="12" id="jobTitle" name="jobTitle" placeholder="Enter Job Title"
             required>
     </div>
     <div class="form-group col-4">
@@ -39,7 +39,7 @@ function _drawForm() {
     </div>
     <div class="form-group col-4">
         <label for="description">Description</label>
-        <input type="text" class="form-control" id="description" name="description"
+        <input type="text" class="form-control" maxlength='120' id="description" name="description"
             placeholder="Enter Description">
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>

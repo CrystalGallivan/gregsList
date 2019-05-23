@@ -10,14 +10,14 @@ export default class Job {
   get Template() {
     return ` 
     <div class="col-3" id="">
-    <div class="card">
-    <h1 class="card-title">${this.company}</h1>
-    <div class="card-body">
-    <h5 class="card-title">${this.jobTitle} - ${this.rate}</h5>
-    <h5 class="card-title">$${this.hours}</h5>
-    <p class="card-text">${this.description}</p>
-    <button class="btn btn-primary" onclick="app.controllers.carControllers.apply('${this._id}')">Apply</button>
-     <button class="btn btn-danger" onclick="app.controllers.carControllers.delete('${this._id}')">Delete</button>
+    <div class="card" id="jobCard">
+    <h1 class="card-title" id='job-card'>${this.company}</h1>
+    <div class="card-body" id='job-card'>
+    <h5 class="card-title" id='job-card'>${this.jobTitle} - ${this.rate}</h5>
+    <h5 class="card-title" id='job-card'>$${this.hours}</h5>
+    <p class="card-text" id='job-card'>${this.description}</p>
+    <button class="btn btn-primary" onclick="app.controllers.jobController.apply('${this._id}')">Apply</button>
+     <button class="btn btn-danger" onclick="app.controllers.jobController.delete('${this._id}')">Delete</button>
     </div>
     </div>
     </div>`

@@ -19,26 +19,26 @@ function _drawForm() {
   document.getElementById('form-content').innerHTML = `<form class="row" onsubmit="app.controllers.carController.addCar(event)">
     <div class="form-group col-4">
         <label for="make">Make</label>
-        <input type="text" class="form-control" id="make" name="make" placeholder="Enter Make" required>
+        <input type="text" class="form-control" maxlength="12" id="make" name="make" placeholder="Enter Make" required>
     </div>
     <div class="form-group col-4">
         <label for="model">Model</label>
-        <input type="text" class="form-control" id="model" name="model" placeholder="Enter Model"
+        <input type="text" class="form-control" maxlength="12" id="model" name="model" placeholder="Enter Model"
             required>
     </div>
     <div class="form-group col-4">
         <label for="year">Year</label>
-        <input type="number" class="form-control" id="year" name="year" placeholder="Enter Year"
+        <input type="number" class="form-control" max="4" id="year" name="year" placeholder="Enter Year"
             required>
     </div>
     <div class="form-group col-4">
         <label for="price">Price</label>
-        <input type="number" class="form-control" id="price" name="price" placeholder="Enter Price"
+        <input type="number" class="form-control" max="7"id="price" name="price" placeholder="Enter Price"
             required>
     </div>
     <div class="form-group col-4">
         <label for="description">Description</label>
-        <input type="text" class="form-control" id="description" name="description"
+        <input type="text" class="form-control" maxlength="120" id="description" name="description"
             placeholder="Enter Description">
     </div>
     <div class="form-group col-4">

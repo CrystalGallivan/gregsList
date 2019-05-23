@@ -18,8 +18,8 @@ export default class Car {
     <h5 class="card-title">${this.make} - ${this.model} - ${this.year}</h5>
     <h5 class="card-title">$${this.price.toFixed(2)}</h5>
     <p class="card-text">${this.description}</p>
-    <button class="btn btn-primary" onclick="app.controllers.carControllers.bid('${this._id}')">Bid</button>
-     <button class="btn btn-danger" onclick="app.controllers.carControllers.delete('${this._id}')">Delete</button>
+    <button class="btn btn-primary" onclick="app.controllers.carController.bid('${this._id}')">Bid</button>
+     <button class="btn btn-danger" onclick="app.controllers.carController.delete('${this._id}')">Delete</button>
     </div>
     </div>
     </div>`
